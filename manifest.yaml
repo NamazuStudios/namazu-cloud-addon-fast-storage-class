@@ -1,0 +1,20 @@
+# manifest.yaml — THIS addon's input declaration (contract clause 10).
+#
+# Every per-install input here is tenant-specific, so NOTHING is bound
+# statically: the consuming fork's matrix entry carries the values via the
+# runner's `contract` input (--contract KEY=JSON), and the addon's
+# variables.tf declares them default-less (no contract values, no valid
+# plan — the entry is the request AND the config).
+#
+# The visibility contract: `visibility: shared` makes this addon consumable
+# by any org fork; per-tenant values always ride that fork's entry.
+
+description: >-
+  Per-tenant fast StorageClass: one EBS CSI class per install, named
+  <namespace-id>-<storage-class-name> for the tenant it serves, with
+  provisioned IOPS/throughput (gp3's max: 16,000 IOPS + 1,000 MiB/s) and a
+  ValidatingAdmissionPolicy guard that denies PVCs referencing the class
+  from any other namespace. Built for snapshot lazy-restore workloads
+  (weights cold-start: the pre-read reads THROUGH this pipe).
+visibility: shared
+display: Fast Storage Class
