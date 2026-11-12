@@ -71,3 +71,14 @@ lazily-restored EBS (~16 min/pod); provisioned gp3 (16,000 IOPS +
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+## Bootstrap: none — by design
+
+This addon creates **no AWS resources** and needs **no IAM feature grants**
+beyond the executor base: everything it makes is Kubernetes objects
+(StorageClass + ValidatingAdmissionPolicy + Binding). There is no bootstrap
+script because there is nothing to bootstrap — the consuming org fork's
+bootstrap (executor identity, `iam.policy.json`, RBAC) is the only setup,
+and the only RBAC this addon adds to that is the `storage.k8s.io` +
+`admissionregistration.k8s.io` rules documented above. Account-wide
+surfaces: none.
