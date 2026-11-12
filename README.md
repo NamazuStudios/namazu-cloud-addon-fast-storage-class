@@ -107,3 +107,23 @@ code as published in this repository; work delivered to you under
 contract — including any official addon activated for a fee or custom
 addon authored for you — is delivered under that agreement, not under the
 license's reciprocity terms.
+
+## Built for generative AI cold starts
+
+The measured case this addon exists for: a **generative AI worker pod**
+starts, clones its weights volume **from an EBS snapshot**, and the model
+loader page-faults through the lazily-restored volume — a multi-GB
+checkpoint (diffusion DiT, LLM, or the LoRA adapters stacked on it)
+crawling at ~14 MB/s for a quarter hour before the first inference.
+
+- **Provisioned throughput is the fix**: gp3 at 16,000 IOPS + 1,000
+  MiB/s turns that crawl into a couple of minutes; with the tenant-side
+  parallel pre-read, ready-to-generate drops from ~25 min to ~8-10 min.
+- **Per-tenant classes, per-tenant billing** — the class is named for the
+  namespace and labels carry the tenant ids, so GenAI spend attributes
+  cleanly.
+- **One tenant cannot borrow another's class** — the ValidatingAdmission
+  guard denies PVCs referencing the class outside its namespace.
+- **Layer with LoRA serving** — adapters stacked on a base checkpoint
+  restore through the same volume; the fast class makes swapping adapters
+  per request practical.
