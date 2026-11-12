@@ -87,6 +87,8 @@ surfaces: none.
 
 **AGPL-3.0** — see [LICENSE](LICENSE).
 
+Part of the [Namazu Cloud Addon system](https://github.com/NamazuStudios/namazu-cloud-addon).
+
 This is an **official Namazu Cloud addon** — it can be activated for a
 **fixed fee** (the activation + review process is documented in the
 [namazu-cloud-addon-example template's ADDONS.md](https://github.com/NamazuStudios/namazu-cloud-addon-example/blob/main/ADDONS.md)).
