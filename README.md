@@ -97,3 +97,13 @@ the provisioned-performance knobs, and the namespace guard here are the
 platform's storage story. It is written for Namazu Studios and Namazu
 Cloud use; derivative works are expected to come back upstream to
 `NamazuStudios`, no exceptions.
+
+## AGPL waiver for delivered work
+
+Namazu Studios, as the copyright holder, **waives all AGPL obligations for
+software installed through a purchase or other business arrangement
+between Namazu Studios and the client.** The AGPL terms above govern the
+code as published in this repository; work delivered to you under
+contract — including any official addon activated for a fee or custom
+addon authored for you — is delivered under that agreement, not under the
+license's reciprocity terms.
