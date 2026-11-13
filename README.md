@@ -1,3 +1,7 @@
+<p align="center">
+  <a href="https://cloud.namazustudios.com"><img src="namazu-cloud.png" alt="Namazu Cloud" width="280"></a>
+</p>
+
 # namazu-cloud-addon-fast-storage-class
 
 Per-tenant **fast StorageClass** as a shared addon: one EBS CSI class per
