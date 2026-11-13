@@ -133,3 +133,11 @@ crawling at ~14 MB/s for a quarter hour before the first inference.
 - **Layer with LoRA serving** — adapters stacked on a base checkpoint
   restore through the same volume; the fast class makes swapping adapters
   per request practical.
+<p align="center">
+  <a href="https://cloud.namazustudios.com">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="aws-partner-dark.png">
+      <img src="aws-partner-light.png" alt="AWS Partner" width="200">
+    </picture>
+  </a>
+</p>
