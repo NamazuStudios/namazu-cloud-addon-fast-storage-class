@@ -89,12 +89,12 @@ surfaces: none.
 
 Part of the [Namazu Cloud Addon system](https://github.com/NamazuStudios/namazu-cloud-addon).
 
-This is an **official Namazu Cloud addon** — it can be activated for a
+This is an **official [Namazu Cloud](https://cloud.namazustudios.com) addon** — it can be activated for a
 **fixed fee** (the activation + review process is documented in the
 [namazu-cloud-addon-example template's ADDONS.md](https://github.com/NamazuStudios/namazu-cloud-addon/blob/main/ADDONS.md)).
 
 The repository is made public for **transparency and visibility**: it is
-deeply connected to Namazu Cloud — the tenant-named StorageClass scheme,
+deeply connected to [Namazu Cloud](https://cloud.namazustudios.com) — the tenant-named StorageClass scheme,
 the provisioned-performance knobs, and the namespace guard here are the
 platform's storage story. It is written for Namazu Studios and Namazu
 Cloud use; derivative works are expected to come back upstream to
